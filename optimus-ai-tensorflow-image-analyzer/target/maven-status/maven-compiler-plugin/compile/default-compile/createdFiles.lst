@@ -1,0 +1,3 @@
+org\optimus\ai\image\analyzer\ImageAnalyzer.class
+org\optimus\ai\image\analyzer\ImageInception.class
+org\optimus\ai\image\analyzer\ImageInception$GraphBuilder.class

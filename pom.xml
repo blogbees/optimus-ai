@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.optimus</groupId>
+	<artifactId>optimus-ai-parent</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>optimus-ai</name>
+	<modules>
+	<module>optimus-ai-analyzers</module>
+	<module>optimus-ai-image-analyzer</module>
+	<module>optimus-ai-processors</module>
+	<module>optimus-ai-speech-processor</module>
+	<module>optimus-ai-speech-processor-english</module>
+	<module>optimus-ai-scanners</module>
+	<module>optimus-ai-system-scanner</module>
+    	<module>optimus-ai-tensorflow-image-analyzer</module>
+    	<module>optimus-ai-webservices</module>
+    	<module>optimus-ai-image-webservices</module>
+    	<module>optimus-ai-registration</module>
+  </modules>
+</project>
