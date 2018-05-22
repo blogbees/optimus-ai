@@ -21,7 +21,6 @@ public class ImageFileAnalyzerTest
 		Analyzer<File , Map<String, Object>> analyzer = new ImageFileAnalyzer();
 		File file = new File("src/test/resources/image_with_text.jpg");
 		Map<String, Object> imageDetails = analyzer.analyze(file);
-		System.out.println("Image Details ="+imageDetails);
 		assertNotNull(imageDetails);
 		assertNotNull(imageDetails.get("height"));
 		assertNotNull(imageDetails.get("width"));

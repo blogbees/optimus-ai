@@ -12,9 +12,6 @@
 	<name>optimus-ai-image-webservices</name>
 	<description>Optimus AI Micro Services</description>
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.8</java.version>
 		<spring.version>1.5.13.RELEASE</spring.version>
 	</properties>
 	<dependencies>
@@ -45,6 +42,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>${spring.version}</version>
 			</plugin>
 		</plugins>
 	</build>

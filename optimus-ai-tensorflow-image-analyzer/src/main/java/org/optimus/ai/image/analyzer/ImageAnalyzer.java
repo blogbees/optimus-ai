@@ -9,9 +9,13 @@ import java.util.List;
 import java.util.Map;
 
 import org.optimus.ai.system.analyzers.Analyzer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.tensorflow.TensorFlow;
 
 public class ImageAnalyzer implements Analyzer<byte[], Map<String, Object>> {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(ImageAnalyzer.class);
 
 	private File inceptionFile = null;
 
@@ -30,13 +34,13 @@ public class ImageAnalyzer implements Analyzer<byte[], Map<String, Object>> {
 					.get(getClass().getClassLoader().getResource("imagenet_comp_graph_label_strings.txt").toURI())
 					.toFile();
 		} catch (final URISyntaxException e) {
-			System.out.println("Exception occured e" + e.getMessage());
+			LOGGER.error("Exception occurred in initializing ImageAnalyzer", e);
 		}
 	}
 
 	@SuppressWarnings("unchecked")
 	public Map<String, Object> analyze(byte[] input) throws Exception {
-		System.out.println(TensorFlow.version());
+		LOGGER.info("Using TensorFlow version :"+TensorFlow.version());
 		Map<String, Object> returnResults = new LinkedHashMap<>();
 		Map<String, Object> results = ImageInception.analyze(input, Files.readAllBytes(inceptionFile.toPath()),
 				graphFile);

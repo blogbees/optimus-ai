@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.optimus</groupId>
 	<artifactId>optimus-ai-parent</artifactId>
@@ -7,16 +8,49 @@
 	<packaging>pom</packaging>
 	<name>optimus-ai</name>
 	<modules>
-	<module>optimus-ai-analyzers</module>
-	<module>optimus-ai-image-analyzer</module>
-	<module>optimus-ai-processors</module>
-	<module>optimus-ai-speech-processor</module>
-	<module>optimus-ai-speech-processor-english</module>
-	<module>optimus-ai-scanners</module>
-	<module>optimus-ai-system-scanner</module>
-    	<module>optimus-ai-tensorflow-image-analyzer</module>
-    	<module>optimus-ai-webservices</module>
-    	<module>optimus-ai-image-webservices</module>
-    	<module>optimus-ai-registration</module>
-  </modules>
+		<module>optimus-ai-analyzers</module>
+		<module>optimus-ai-image-analyzer</module>
+		<module>optimus-ai-processors</module>
+		<module>optimus-ai-speech-processor</module>
+		<module>optimus-ai-speech-processor-english</module>
+		<module>optimus-ai-scanners</module>
+		<module>optimus-ai-system-scanner</module>
+		<module>optimus-ai-tensorflow-image-analyzer</module>
+		<module>optimus-ai-webservices</module>
+		<module>optimus-ai-image-webservices</module>
+		<module>optimus-ai-registration</module>
+	</modules>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<junit.version>4.12</junit.version>
+		<slf4j.version>1.8.0-beta2</slf4j.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.7.0</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
