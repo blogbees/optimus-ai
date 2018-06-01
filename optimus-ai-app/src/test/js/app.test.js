@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import OptimusApp from './OptimusApp';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
+  ReactDOM.render(<OptimusApp />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
